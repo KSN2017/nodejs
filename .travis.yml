@@ -4,18 +4,10 @@ node_js:
 
 script:
   - yarn
-  - yarn build
+  - yarn builds
   - cp ./build/index.html ./build/200.html
 #  - cp -r /home/travis/build/odeum/odeum-codejs/experiments/3/build ../../
 
-language: node_js
-node_js:
-- '6'
-services:
-- mongodb
-cache:
-  directories:
-    - node_modules
 deploy:
 - provider: s3
   access_key_id: $AWS_ACCESS_KEY
@@ -23,19 +15,20 @@ deploy:
   local_dir: dpl_cd_upload
   skip_cleanup: true
   on: &2
-    repo: organization/reponameHERE
-  bucket: yourBucketNameHERE
-  region: bucketRegionHERE
+    repo: organization/odeum
+  bucket: odeum
+  region: eu-west-1
 - provider: codedeploy
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
-  bucket: yourBucketNameHERE
+  bucket: odeum
   key: latest.zip
   bundle_type: zip
-  application: NameOfTheCodeDeployApplicationNameHERE
-  deployment_group: CodeDeployDeploymentGroupNameHERE
-  region: serverRegionHERE
+  application: wwwodeum
+  deployment_group: odeumgp
+  region: eu-west-1
   on: *2
+
 script:
   - zip -r latest *
   - mkdir -p dpl_cd_upload
