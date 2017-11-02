@@ -1,3 +1,2 @@
-# nodejs
+# Sample UI Components for ODEUM Code component library.
 
-Hello World fra KSN
