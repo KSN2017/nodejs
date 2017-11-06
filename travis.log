@@ -1,5 +1,5 @@
 Command line:
-"travis encrypt --add deploy.secret_access_key wLHSK3Xh+AQzrDvMYJsqgJrmHOK6jbVgSJq70+39"
+"travis encrypt --add deploy.secret_access_key"
 
 
    ________                                 __
@@ -26,7 +26,7 @@ Command line:
 
      There is absolutely no warranty on any results obtained from TRAVIS.
 
-  #  Running on ksn at Fri Nov  3 09:41:02 2017 (PID 10229).
+  #  Running on ksn at Mon Nov  6 09:57:47 2017 (PID 5530).
   #  Running in /home/ksn/nodereact
   #  Source code version: Nov 07 2015.
   #  Compiled at Nov 17 2015 23:12:21.
