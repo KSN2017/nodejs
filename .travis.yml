@@ -15,17 +15,17 @@ deploy:
   local_dir: dpl_cd_upload
   skip_cleanup: true
   on: &2
-    repo: organization/odeum
-  bucket: odeum
+    repo: organization/odeumweb
+  bucket: w3odeum
   region: eu-west-1
 - provider: codedeploy
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
-  bucket: odeum
+  bucket: w3odeum
   key: latest.zip
   bundle_type: zip
-  application: wwwodeum
-  deployment_group: odeumgp
+  application: odeumapp
+  deployment_group: teamodeum
   region: eu-west-1
   on: *2
 
